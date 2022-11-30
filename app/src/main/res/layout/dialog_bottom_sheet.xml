@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="30dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="190dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primaryMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Are you sure do you wanna delete this note"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="No"
+        android:textColor="@color/black"
+        app:cornerRadius="20dp"
+        android:padding="12dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnYes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_weight="1"
+        android:text="Yes"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        android:padding="12dp"
+        android:backgroundTint="@color/primaryMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

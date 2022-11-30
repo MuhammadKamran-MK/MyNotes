@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primaryMedium"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/closeNoteDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Note"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/parentTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:helperText="*Required"
+        app:helperTextTextColor="@color/white"
+        app:errorEnabled="true"
+        android:focusable="true"
+        android:layout_marginTop="16dp"
+        android:hint="Title"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dialogNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/parentDesc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:helperText="*Required"
+        app:helperTextTextColor="@color/white"
+        app:errorEnabled="true"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:hint="Description"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/parentTitle"
+        app:layout_constraintStart_toStartOf="@+id/parentTitle"
+        app:layout_constraintTop_toBottomOf="@+id/parentTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dialogNoteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Add"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primaryDark"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/parentDesc"
+        app:layout_constraintStart_toStartOf="@+id/parentDesc"
+        app:layout_constraintTop_toBottomOf="@+id/parentDesc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
